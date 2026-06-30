@@ -1,0 +1,176 @@
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/07d0a9164c.js" crossorigin="anonymous"></script>
+</head>
+<body>
+<div id="header">
+    <div class="container">
+        <nav>
+            <img src="https://github.com/heypayal933/portfolio/blob/main/logo2.jpg?raw=true" class="logo">
+            <ul id="sidemenu">
+                <li><a href="#header">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <i class="fa-solid fa-circle-xmark" onclick="closemenu()"></i>
+            </ul>
+            <i class="fa-solid fa-bars" onclick="openmenu()"></i>
+        </nav>
+        <div class="header-text">
+            <p>Full-Stack Developer</p>
+            <h2>Hi,I'm <span>Payal</span></h2>
+        </div>
+    </div>
+</div>
+<!----------------------------about-------------------------------------------->
+<div id="about">
+    <div class="container">
+        <div class="row">
+            <div class="about-col-1">
+                <img src="https://github.com/heypayal933/portfolio/blob/main/user1.jpg?raw=true">
+            </div>
+            <div class="about-col-2">
+                <h1 class="sub-title">About Me</h1>
+                <p>Innovative Full-Stack Web Developer in creating and optimizing websites.
+                    Skilled in utilizing programming languages to build user-friendly platforms.
+                    Excel in problem-solving,teamwork and communication ensuring smooth project execution and delivery.
+                </p>
+
+                <div class="tab-titles">
+                    <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                    <p class="tab-links" onclick="opentab('experience')">Experience</p>
+                    <p class="tab-links" onclick="opentab('education')">Education</p>
+                </div>
+                <div class="tab-contents active-tab" id="skills">
+                    <ul>
+                        <li><span>Full-Stack Developer</span><br>Building both the front and back parts of websites and web apps.</li>
+                        <li><span>Web Developer</span><br>Web app Development</li>
+                        <li><span>Programming Languages:</span><br>Python&emsp;&emsp;&emsp;My SQL<br>Java&emsp;&emsp;&emsp;&emsp;PL/SQL<br>
+                            C&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;C++</li>
+                        <li><span>Web Technologies & framework:</span><br>HTML<br>JavaScript<br>Angular</li>
+                    </ul>
+                </div>
+                <div class="tab-contents" id="experience">
+                    <ul>
+                        <li><span>Get IT Project Pvt. Ltd.</span><br> </li>
+                        <li><span>Python Project</span><br>Retail Management</li>
+                        <li><span>Java Project</span><br>Inventory Management</li>
+                    </ul>
+                </div>
+                <div class="tab-contents" id="education">
+                    <ul>
+                        <li><span>2022-25</span><br>Bachelor of Arts| English <br>Patliputra University, Patna</li>
+                        <li><span>2024</span><br>Python & My SQL <br>Get IT Project Pvt. Ltd. , Patna
+                            <br><a href=https://getproject.net/new/certi_print.php?regsno=GIPPL65970924>Certificate</a></li>
+                        <li><span>2023</span><br>Java & Oracle <br>Get IT Project Pvt. Ltd. , Patna
+                            <br><a href=https://getproject.net/new/certi_print.php?regsno=GIPPL65960924>Certificate</a></li>
+                        <li><span>2020-22</span><br>Intermediate| PCM&emsp;&emsp;&emsp;62%<br>S.D.S. Inter College, Jalalpur(Saran)</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!----------------------------------services--------------------------->
+<div id="services">
+    <div class="container">
+        <h1 class="sub-title">My Services</h1>
+        <div class="services-list">
+            <div>
+                <h2>Backend Development</h2>
+                <p>Excellent coding</p>
+                <a href="#">learn more</a>
+            </div>
+            <div>
+                <h2>Frontend Development</h2>
+                <p>Excellent coding</p>
+                <a href="#">learn more</a>
+            </div>
+            <div>
+                <h2>Web Development</h2>
+                <p>Excellent coding</p>
+                <a href="#">learn more</a>
+            </div>
+        </div>
+    </div>
+</div>
+<!-----------------------------------contact-------------------------------->
+<div id="contact">
+    <div class="container">
+        <div class="row">
+            <div class="contact-left">
+                <h1 class="sub-title">Contact Me</h1>
+                <p><i class="fa-solid fa-paper-plane"></i>payal.it933@gmail.com</p>
+                <p><i class="fa-solid fa-address-book"></i>+91-9334273197</p>
+                <a href="https://github.com/heypayal933/portfolio/blob/main/payal_k.pdf?raw=true" download class="btn btn2">Download CV</a>
+            </div>
+            <div class="contact-right">
+                <form name="submit-to-google-sheet">
+                    <input type="text" name="Name" placeholder="Your Name" required>
+                    <input type="text" name="Email" placeholder="Your Email" required>
+                    <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
+                    <button type="submit" class="btn btn2">Submit</button>
+                </form>
+                <span id="msg"></span>
+            </div>
+        </div>
+    </div>
+    <div class="bottom_margin">
+        <p>Thank You &nbsp;<i class="fa-solid fa-heart"></i>&nbsp; for visiting the page.</p>
+    </div>
+</div>
+
+<script>
+
+    var tablinks = document.getElementsByClassName("tab-links");
+    var tabcontents = document.getElementsByClassName("tab-contents");
+    function opentab(tabname)
+    {
+        for(tablink of tablinks)
+        {
+            tablink.classList.remove("active-link");
+        }
+        for(tabcontent of tabcontents)
+        {
+            tabcontent.classList.remove("active-tab");
+        }
+        event.currentTarget.classList.add("active-link");
+        document.getElementById(tabname).classList.add("active-tab");
+    }
+
+</script>
+
+<script>
+    var sidemeu = document.getElementById("sidemenu")
+    function openmenu()
+    {
+        sidemeu.style.right="0";
+    }
+    function closemenu()
+    {
+        sidemeu.style.right="-200";
+    }
+</script>
+
+<script>
+    const scriptURL = 'https://script.google.com/macros/s/AKfycbwqOCWRJKY0ykFmageoXVndKNQcKxKMdZQ9mqkQ4VDakRzeD3OT0xYbTrb2tv0mPTSEWg/exec'
+    const form = document.forms['submit-to-google-sheet']
+    const msg = document.getElementById("msg")
+  
+    form.addEventListener('submit', e => {
+      e.preventDefault()
+      fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+        .then(response => {
+            msg.innerHTML="Message sent succesfully"
+            setTimeout(function(){
+                msg.innerHTML=""
+            },5000)
+            form.reset
+        })
+        .catch(error => console.error('Error!', error.message))
+    })
+  </script>
+  <script src="tracker.js"></script>
+</body>
+</html>
